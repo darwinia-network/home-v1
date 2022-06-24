@@ -108,8 +108,8 @@ const PloContribute = () => {
     : null;
 
   const myTotalContribute = myContributedStatistic ? new BN(myContributedStatistic.totalBalance) : new BN(0);
-  const myContributeTotalPower = myContributedStatistic ? new BN(myContributedStatistic.totalPower) : new BN(0);
-  const myReferTotalPower = myReferContributedStatistic ? new BN(myReferContributedStatistic.totalPower) : new BN(0);
+  // const myContributeTotalPower = myContributedStatistic ? new BN(myContributedStatistic.totalPower) : new BN(0);
+  // const myReferTotalPower = myReferContributedStatistic ? new BN(myReferContributedStatistic.totalPower) : new BN(0);
 
   let referralsContributeHistory = [];
   if (myReferContributedStatistic) {
@@ -157,7 +157,7 @@ const PloContribute = () => {
   const myContributedShare = Big(myTotalContribute.toString()).div(globalTotalPower.toString());
   const myReferralCodeFromGql = myReferralCode ? referralCodeToPolkadotAddress(myReferralCode.memo) : null;
 
-  const myTotalPower = myReferTotalPower.add(myContributeTotalPower);
+  // const myTotalPower = myReferTotalPower.add(myContributeTotalPower);
   // const myRingReward = myTotalPower.isZero()
   //   ? "0"
   //   : Big(myTotalPower).div(globalTotalPower.toString()).mul(Big("200000000")).toFixed(4);
