@@ -164,8 +164,8 @@ const PloContribute = () => {
   // const myKtonReward = myTotalPower.isZero()
   //   ? "0"
   //   : Big(myTotalPower).div(globalTotalPower.toString()).mul(Big("8000")).toFixed(4);
-  const myRingReward = '0';
-  const myKtonReward = '0';
+  const myRingReward = "0";
+  const myKtonReward = "0";
 
   let auctionSuccessReward = {
     base: { ring: Big(0), kton: Big(0) },
