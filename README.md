@@ -1,4 +1,4 @@
-## Darwinia network
+## Darwinia network (Legacy)
 
 #### How to add a blog
 
