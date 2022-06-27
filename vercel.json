@@ -23,19 +23,19 @@
     }
   ],
   "rewrites": [
-    { "source": "/faq", "destination": "/index.html" },
-    { "source": "/brand", "destination": "/index.html" },
-    { "source": "/ambassador", "destination": "/index.html" },
-    { "source": "/community", "destination": "/index.html" },
-    { "source": "/blog", "destination": "/index.html" },
-    { "source": "/blog/(.*)", "destination": "/index.html" },
-    { "source": "/reports", "destination": "/index.html" },
-    { "source": "/events", "destination": "/index.html" },
-    { "source": "/videos", "destination": "/index.html" },
-    { "source": "/news", "destination": "/index.html" },
-    { "source": "/tech", "destination": "/index.html" },
-    { "source": "/economic_model", "destination": "/index.html" },
-    { "source": "/plo", "destination": "/index.html" },
-    { "source": "/plo_contribute", "destination": "/index.html" }
+    { "source": "/legacy-home/faq", "destination": "/index.html" },
+    { "source": "/legacy-home/brand", "destination": "/index.html" },
+    { "source": "/legacy-home/ambassador", "destination": "/index.html" },
+    { "source": "/legacy-home/community", "destination": "/index.html" },
+    { "source": "/legacy-home/blog", "destination": "/index.html" },
+    { "source": "/legacy-home/blog/(.*)", "destination": "/index.html" },
+    { "source": "/legacy-home/reports", "destination": "/index.html" },
+    { "source": "/legacy-home/events", "destination": "/index.html" },
+    { "source": "/legacy-home/videos", "destination": "/index.html" },
+    { "source": "/legacy-home/news", "destination": "/index.html" },
+    { "source": "/legacy-home/tech", "destination": "/index.html" },
+    { "source": "/legacy-home/economic_model", "destination": "/index.html" },
+    { "source": "/legacy-home/plo", "destination": "/index.html" },
+    { "source": "/legacy-home/plo_contribute", "destination": "/index.html" }
   ]
 }

@@ -22,39 +22,41 @@ const AsyncPlo = asyncComponent(import("./page/Plo"));
 const AsyncPloContrbite = asyncComponent(import("./page/PloContribute"));
 const history = createBrowserHistory();
 
+const prefix = "/legacy-home";
+
 const Routes = () => (
   <Router history={history}>
     <Switch>
-      <Route exact component={AsyncHome} path="/" />
-      <Route exact component={AsyncFaq} path="/faq" />
+      <Route exact component={AsyncHome} path={`${prefix}/`} />
+      <Route exact component={AsyncFaq} path={`${prefix}/faq`} />
 
-      <Route exact component={AsyncBrand} path="/brand" />
+      <Route exact component={AsyncBrand} path={`${prefix}/brand`} />
 
-      <Route exact component={AsyncAmbassador} path="/ambassador" />
+      <Route exact component={AsyncAmbassador} path={`${prefix}/ambassador`} />
 
-      <Route exact component={AsyncCommunity} path="/community" />
+      <Route exact component={AsyncCommunity} path={`${prefix}/community`} />
 
-      <Route exact component={AsyncBlog} path="/blog" />
-      <Route exact component={AsyncBlogTutorials} path="/blog/tutorials" />
-      <Route exact component={AsyncBlogNewsletters} path="/blog/newsletters" />
+      <Route exact component={AsyncBlog} path={`${prefix}/blog`} />
+      <Route exact component={AsyncBlogTutorials} path={`${prefix}/blog/tutorials`} />
+      <Route exact component={AsyncBlogNewsletters} path={`${prefix}/blog/newsletters`} />
 
       {/* <Route exact component={AsyncMedia} path="/media" /> */}
 
-      <Route exact component={AsyncReports} path="/reports" />
+      <Route exact component={AsyncReports} path={`${prefix}/reports`} />
 
-      <Route exact component={AsyncEvents} path="/events" />
+      <Route exact component={AsyncEvents} path={`${prefix}/events`} />
 
-      <Route exact component={AsyncVideos} path="/videos" />
+      <Route exact component={AsyncVideos} path={`${prefix}/videos`} />
 
-      <Route exact component={AsyncNews} path="/news" />
+      <Route exact component={AsyncNews} path={`${prefix}/news`} />
 
-      <Route exact component={AsyncTech} path="/tech" />
+      <Route exact component={AsyncTech} path={`${prefix}/tech`} />
 
-      <Route exact component={AsyncModel} path="/economic_model" />
+      <Route exact component={AsyncModel} path={`${prefix}/economic_model`} />
 
-      <Route exact component={AsyncPlo} path="/plo" />
+      <Route exact component={AsyncPlo} path={`${prefix}/plo`} />
 
-      <Route exact component={AsyncPloContrbite} path="/plo_contribute" />
+      <Route exact component={AsyncPloContrbite} path={`${prefix}/plo_contribute`} />
 
       <Route component={AsyncNotFound} />
     </Switch>
