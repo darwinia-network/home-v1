@@ -22,7 +22,7 @@ const AsyncPlo = asyncComponent(import("./page/Plo"));
 const AsyncPloContrbite = asyncComponent(import("./page/PloContribute"));
 const history = createBrowserHistory();
 
-const prefix = "/legacy-home";
+const prefix = "/home-v1";
 
 const Routes = () => (
   <Router history={history}>
