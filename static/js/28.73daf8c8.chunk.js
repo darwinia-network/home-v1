@@ -1,0 +1,2 @@
+(this.webpackJsonpdarwinia_homepage=this.webpackJsonpdarwinia_homepage||[]).push([[28],{881:function(e,t,n){"use strict";n.r(t);var a=n(24),i=n(25),c=n(26),r=n(27),s=n(0),o=n(1),p=function(e){Object(c.a)(n,e);var t=Object(r.a)(n);function n(){return Object(a.a)(this,n),t.apply(this,arguments)}return Object(i.a)(n,[{key:"render",value:function(){return Object(o.jsx)("div",{className:"App",children:Object(o.jsx)("div",{children:"Not found"})})}}]),n}(s.Component);t.default=p}}]);
+//# sourceMappingURL=28.73daf8c8.chunk.js.map
