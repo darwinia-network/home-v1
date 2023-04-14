@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdarwinia_homepage=self.webpackChunkdarwinia_homepage||[]).push([[272],{52272:function(e,n,r){r.r(n);var a=r(27853),i=r(84531),t=r(81020),u=r(804),s=r(50390),c=r(62559),o=function(e){(0,t.Z)(r,e);var n=(0,u.Z)(r);function r(){return(0,a.Z)(this,r),n.apply(this,arguments)}return(0,i.Z)(r,[{key:"render",value:function(){return(0,c.jsx)("div",{className:"App",children:(0,c.jsx)("div",{children:"Not found"})})}}]),r}(s.Component);n.default=o}}]);
+//# sourceMappingURL=272.9b648b73.chunk.js.map
