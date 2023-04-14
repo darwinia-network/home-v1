@@ -3,6 +3,8 @@ import classNames from "classnames/bind";
 import { Tooltip, Modal, Spin, message } from "antd";
 import Web3Utils from "web3-utils";
 import { web3FromAddress } from "@polkadot/extension-dapp";
+import { u8aToHex } from '@polkadot/util';
+import { decodeAddress } from '@polkadot/util-crypto';
 
 import acceptIcon from "../img/accept.svg";
 import acceptedIcon from "../img/accepted.svg";
@@ -17,23 +19,8 @@ import { ApolloClient, InMemoryCache, ApolloProvider, useQuery, gql } from "@apo
 
 const GET_MY_ADDRESS_REMARKS = gql`
   query RemarkedNftAddresses($signer: String!) {
-    remarkedNftAddresses(
-      filter: { signer: { equalTo: $signer } }
-      orderBy: [BLOCK_NUMBER_ASC, EXTRINSIC_INDEX_ASC]
-      first: 5
-    ) {
-      nodes {
-        id
-        # signer
-        # value
-        # addressValue
-        # blockNumber
-        # extrinsicIndex
-        # extrinsicTimestamp
-        # extrinsicHash
-        # https://kusama.subscan.io/extrinsic/11416211-2
-        # https://kusama.subscan.io/extrinsic/0x59ffa39f7b6f08c0958f824b140a839e049dda47aa89ea6337257712d4d2e0bd
-      }
+    claimRemarks(limit: 10, where: {signer_eq: $signer}) {
+      value
     }
   }
 `;
@@ -56,12 +43,12 @@ const MetaverseNFT = ({ myTotalContribute, currentAccount }) => {
   const [nftDarwiniaAddress, setNftDarwiniaAddress] = useState("");
 
   const { loading, error, data } = useQuery(GET_MY_ADDRESS_REMARKS, {
-    variables: { signer: currentAccount ? currentAccount.address : "" },
+    variables: { signer: currentAccount ? u8aToHex(decodeAddress(currentAccount.address)) : '' },
   });
   error && console.error(error);
   const myRemarked =
-    !loading && !error && data && data.remarkedNftAddresses && data.remarkedNftAddresses.nodes.length
-      ? data.remarkedNftAddresses.nodes[0]
+    !loading && !error && data && data.claimRemarks && data.claimRemarks.length
+      ? data.claimRemarks[0]
       : null;
 
   const handleClickAcceptAndClaim = async () => {
@@ -300,7 +287,7 @@ const MetaverseNFT = ({ myTotalContribute, currentAccount }) => {
 };
 
 const client = new ApolloClient({
-  uri: "https://api.subquery.network/sq/JayJay1024/darwinia-nft-polkadot",
+  uri: "https://squid.subsquid.io/darwinia-nft-squid/v/v1/graphql",
   cache: new InMemoryCache(),
 });
 
