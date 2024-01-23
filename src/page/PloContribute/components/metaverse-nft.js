@@ -53,10 +53,11 @@ const MetaverseNFT = ({ myTotalContribute, currentAccount }) => {
 
   const handleClickAcceptAndClaim = async () => {
     setClaimLoading(true);
-    const injector = await web3FromAddress(currentAccount.address);
-    api.setSigner(injector.signer);
 
     try {
+      const injector = await web3FromAddress(currentAccount.address);
+      api.setSigner(injector.signer);
+
       message.info("Please sign and send the transaction in Polkadot extension");
 
       const mark = `NFT amount: 1; Rewards receiving address: ${nftDarwiniaAddress}`;
